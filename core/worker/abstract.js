@@ -94,7 +94,7 @@ Worker.prototype = {
   },
   getScriptPath : function(scriptId, scriptMD5, next) {
     var worker = this;
-    var scriptPath = join( process.env.THEEYE_AGENT_SCRIPT_PATH, scriptId );
+    var scriptPath = join( process.env.THEEYE_AGENT_SCRIPT_PATH, scriptId + '.bat' );
 
     fs.exists(scriptPath,function(exists){
       var download=false;
